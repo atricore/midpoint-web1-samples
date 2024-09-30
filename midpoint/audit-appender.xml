@@ -1,0 +1,9 @@
+<appender xsi:type="c:FileAppenderConfigurationType">
+    <pattern>MPAUDIT [%X{subsystem}] %msg%n</pattern>
+    <name>MIDPOINT_AUDIT_LOG</name>
+    <fileName>${midpoint.home}/log/midpoint-audit.log</fileName>
+    <filePattern>${midpoint.home}/log/midpoint-audit-%d{yyyy-MM-dd}.%i.log</filePattern>
+    <maxHistory>10</maxHistory>
+    <maxFileSize>100MB</maxFileSize>
+    <append>true</append>
+</appender>

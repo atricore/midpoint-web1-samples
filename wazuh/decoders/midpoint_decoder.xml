@@ -1,0 +1,100 @@
+<!-- MidPoint Decoders -->
+<!-- Decoders will be combined if they share the same name, in this case midpoint_trail -->
+
+<!--
+  - Event static fields:
+
+  - location   - where the log came from (only on FTS)
+  - srcuser    - extracts the source username
+  - dstuser    - extracts the destination (target) username
+  - user       - an alias to dstuser (only one of the two can be used)
+  - srcip      - source ip
+  - dstip      - dst ip
+  - srcport    - source port
+  - dstport    - destination port
+  - protocol   - protocol
+  - id         - event id
+  - url        - url of the event
+  - action     - event action (deny, drop, accept, etc)
+  - status     - event status (success, failure, etc)
+  - extra_data - Any extra data
+
+-->
+
+<decoder name="midpoint">
+    <!-- prematch any log entry starting with MPAUDIT, this is configured in MidPoint appender -->
+    <prematch>^MPAUDIT</prematch>
+</decoder>
+
+<decoder name="midpoint_trail">
+  <parent>midpoint</parent>
+  <!-- extract subsystem and timestamp from event -->
+  <regex offset="after_parent">^ [(\S+)] (\d+-\d+-\d+T\d+:\d+:\d+.\d+\p\d+)</regex>
+  <order>subsystem,timestamp</order>
+</decoder>
+
+<decoder name="midpoint_trail">
+  <parent>midpoint</parent>
+  <!-- extract event, task and other attributes -->
+  <regex offset="after_parent">^ \.* eid=(\S+), et=(\S+), es=(\S+), sid=(\S+), rid=\S+, tid=(\S+), toid=(\S+), hid=(\S+), nid=(\S+), raddr=(\S+)</regex>
+  <order>event_id,event_type,event_stage,session_id,task_id,task_oid,host_id,node_id,src_ip</order>
+</decoder>
+
+
+<decoder name="midpoint_trail">
+  <parent>midpoint</parent>
+  <!-- channel, outcome and principal -->
+  <regex offset="after_parent">^ \.* ch=http://midpoint.evolveum.com/xml/ns/public/common/channels-3#(\S+), o=(\S+), p=(\S*)</regex>
+  <order>channel,outcome,principal</order>
+</decoder>
+
+<decoder name="midpoint_trail">
+  <parent>midpoint</parent>
+  <!-- epm -->
+  <regex offset="after_parent">^ \.* epm=(\S+)</regex>
+  <order>effective_privilege_modification</order>
+</decoder>
+
+<decoder name="midpoint_trail">
+  <parent>midpoint</parent>
+  <!-- initiator data -->
+  <regex offset="after_parent">^ \.* I=(\S+):(\S+)\((\S+)\)</regex>
+  <order>initiator_type,initiator_oid,initiator_name</order>
+</decoder>
+
+<decoder name="midpoint_trail">
+  <parent>midpoint</parent>
+  <!-- effective principal data -->
+  <regex offset="after_parent">^ \.* EP=(\S+):(\S+)\((\S+)\)</regex>
+  <order>effective_principal_type,effective_principal_oid,effective_principal_name</order>
+</decoder>
+
+<decoder name="midpoint_trail">
+  <parent>midpoint</parent>
+  <!-- target owner data -->
+  <regex offset="after_parent">^ \.* TO=(\S+):(\S+)\((\S+)\)</regex>
+  <order>target_owner_type,target_owner_oid,target_owner_name</order>
+</decoder>
+
+<decoder name="midpoint_trail">
+  <parent>midpoint</parent>
+  <!-- target data -->
+  <regex offset="after_parent">^ \.* T=(\S+):(\S+)\((\S+)\)</regex>
+  <order>target_type,target_oid,target_name</order>
+</decoder>
+
+<decoder name="midpoint_trail">
+  <parent>midpoint</parent>
+  <!-- target data (shadows) -->
+  <regex offset="after_parent">^ \.* T=PRV\(oid=(\S+), targetType={\S+}(\S+), targetName=(\S+)\)</regex>
+  <order>target_oid,target_type,target_name</order>
+</decoder>
+
+<decoder name="midpoint_trail">
+  <parent>midpoint</parent>
+  <!-- message -->
+  <regex offset="after_parent">^ \.*, m=(\.+)</regex>
+  <order>message</order>
+</decoder>
+
+

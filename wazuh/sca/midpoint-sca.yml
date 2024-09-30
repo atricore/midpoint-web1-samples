@@ -1,0 +1,20 @@
+policy:
+  id: "midpoint_audit"
+  file: "midpoint.yml"
+  name: "System audit for Midpoint running systems"
+  description: "Guidance for establishing a secure configuration for systems running midppoint."
+  references:
+    - https://www.evolveum.com/midpoint/
+
+checks:
+  - id: 2000
+    title: "Ensure MidPoint configuration file is read-only by the owner"
+    description: "Verify that config.xml is read/write by the owner to prevent unauthorized access or modifications."
+    rationale: "Restricting permissions on the MidPoint configuration file ensures that unauthorized users cannot view or alter sensitive configurations."
+    remediation: "Run 'chmod 600 /opt/midpoint/var/config.xml' to set the correct permissions."
+    compliance:
+      - "Security Best Practice"
+    condition: any
+    rules:
+      - 'c:stat /opt/midpoint/var/config.xml -> r:^Access:\s*\(0600/-rw-------\)'  
+

@@ -1,0 +1,57 @@
+{
+  "timestamp": "2024-09-30T11:50:06.359+0000",
+  "rule": {
+    "level": 7,
+    "description": "Midpoint Authentication failed for asdfasdfsadf,",
+    "id": "100902",
+    "firedtimes": 1,
+    "mail": false,
+    "groups": [
+      "midpoint",
+      "authentication_failed"
+    ],
+    "pci_dss": [
+      "10.2.4",
+      "10.2.5"
+    ]
+  },
+  "agent": {
+    "id": "006",
+    "name": "midpoint-1",
+    "ip": "10.244.0.57",
+    "labels": {
+      "wgroup": "Midpoint"
+    }
+  },
+  "manager": {
+    "name": "wazuh-manager-master-0"
+  },
+  "id": "1727697006.7885",
+  "cluster": {
+    "name": "wazuh",
+    "node": "wazuh-manager-master"
+  },
+  "full_log": "MPAUDIT [REPOSITORY] 2024-09-30T11:50:06.247+0000 eid=1727697006247-55902-2, et=CREATE_SESSION, es=REQUEST, sid=3222732BEB479F230C990ACDC38685DE, rid=null, tid=1727697006247-55902-1, toid=null, hid=mp-server-0.mp-server.web1-iam.svc.cluster.local, nid=DefaultNode, raddr=10.244.2.0, I=null, EP=null, epm=null, T=null, TO=null, D=[], ch=http://midpoint.evolveum.com/xml/ns/public/common/channels-3#user, o=FATAL_ERROR, p=asdfasdfsadf, m=no focus",
+  "decoder": {
+    "name": "midpoint"
+  },
+  "data": {
+    "subsystem": "REPOSITORY",
+    "timestamp": "2024-09-30T11:50:06.247+0000",
+    "event_id": "1727697006247-55902-2",
+    "event_type": "CREATE_SESSION",
+    "event_stage": "REQUEST",
+    "session_id": "3222732BEB479F230C990ACDC38685DE",
+    "task_id": "1727697006247-55902-1",
+    "task_oid": "null",
+    "host_id": "mp-server-0.mp-server.web1-iam.svc.cluster.local",
+    "node_id": "DefaultNode",
+    "src_ip": "10.244.2.0,",
+    "channel": "user",
+    "outcome": "FATAL_ERROR",
+    "principal": "asdfasdfsadf,",
+    "effective_privilege_modification": "null,",
+    "message": "no focus"
+  },
+  "location": "/opt/midpoint/var/log/midpoint-audit.log"
+}

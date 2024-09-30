@@ -1,0 +1,554 @@
+{
+    "@ns": "http://prism.evolveum.com/xml/ns/public/types-3",
+    "object": {
+        "@type": "http://midpoint.evolveum.com/xml/ns/public/common/api-types-3#ObjectListType",
+        "object": [
+            {
+                "@type": "c:UserType",
+                "oid": "f499f0be-db20-4bfa-b3f9-96ff08550502",
+                "version": "29",
+                "name": "sgonzalez@atricore.com",
+                "description": "change #1",
+                "parentOrgRef": {
+                    "oid": "95f4a65d-9937-4c78-8182-c131c12863fe",
+                    "relation": "org:manager",
+                    "type": "c:OrgType"
+                },
+                "trigger": {
+                    "@id": 11,
+                    "timestamp": "2024-09-30T12:19:43.707Z",
+                    "handlerUri": "http://midpoint.evolveum.com/xml/ns/public/model/trigger/unlock/handler-3"
+                },
+                "metadata": {
+                    "requestTimestamp": "2024-09-24T02:36:53.054Z",
+                    "requestorRef": {
+                        "oid": "00000000-0000-0000-0000-000000000002",
+                        "relation": "org:default",
+                        "type": "c:UserType"
+                    },
+                    "createTimestamp": "2024-09-24T02:36:53.082Z",
+                    "creatorRef": {
+                        "oid": "00000000-0000-0000-0000-000000000002",
+                        "relation": "org:default",
+                        "type": "c:UserType"
+                    },
+                    "createChannel": "http://midpoint.evolveum.com/xml/ns/public/common/channels-3#import",
+                    "createTaskRef": {
+                        "oid": "10000000-0000-0000-0000-000000000500",
+                        "relation": "org:default",
+                        "type": "c:TaskType"
+                    },
+                    "modifyTimestamp": "2024-09-30T12:15:19.335Z",
+                    "modifierRef": {
+                        "oid": "d83c98d5-dea9-49eb-b649-60fd5609a4d3",
+                        "relation": "org:default",
+                        "type": "c:UserType"
+                    },
+                    "modifyChannel": "http://midpoint.evolveum.com/xml/ns/public/common/channels-3#rest"
+                },
+                "operationExecution": [
+                    {
+                        "@id": 6,
+                        "recordType": "simple",
+                        "timestamp": "2024-09-24T02:43:15.156Z",
+                        "operation": {
+                            "objectDelta": {
+                                "changeType": "modify",
+                                "objectType": "c:UserType"
+                            },
+                            "executionResult": {
+                                "operation": "com.evolveum.midpoint.model.impl.lens.ChangeExecutor.executeDelta",
+                                "status": "success",
+                                "importance": "normal",
+                                "token": 1000000000000003841
+                            },
+                            "objectName": "sgonzalez@atricore.com"
+                        },
+                        "status": "success",
+                        "initiatorRef": {
+                            "oid": "00000000-0000-0000-0000-000000000002",
+                            "relation": "org:default",
+                            "type": "c:UserType"
+                        },
+                        "channel": "http://midpoint.evolveum.com/xml/ns/public/common/channels-3#user"
+                    },
+                    {
+                        "@id": 7,
+                        "recordType": "simple",
+                        "timestamp": "2024-09-24T02:50:39.889Z",
+                        "operation": {
+                            "objectDelta": {
+                                "changeType": "modify",
+                                "objectType": "c:UserType"
+                            },
+                            "executionResult": {
+                                "operation": "com.evolveum.midpoint.model.impl.lens.ChangeExecutor.executeDelta",
+                                "status": "success",
+                                "importance": "normal",
+                                "token": 1000000000000004158
+                            },
+                            "objectName": "sgonzalez@atricore.com"
+                        },
+                        "status": "success",
+                        "initiatorRef": {
+                            "oid": "d83c98d5-dea9-49eb-b649-60fd5609a4d3",
+                            "relation": "org:default",
+                            "type": "c:UserType"
+                        },
+                        "channel": "http://midpoint.evolveum.com/xml/ns/public/common/channels-3#rest"
+                    },
+                    {
+                        "@id": 8,
+                        "recordType": "simple",
+                        "timestamp": "2024-09-24T02:51:13.307Z",
+                        "operation": {
+                            "objectDelta": {
+                                "changeType": "modify",
+                                "objectType": "c:UserType"
+                            },
+                            "executionResult": {
+                                "operation": "com.evolveum.midpoint.model.impl.lens.ChangeExecutor.executeDelta",
+                                "status": "success",
+                                "importance": "normal",
+                                "token": 1000000000000004292
+                            },
+                            "objectName": "sgonzalez@atricore.com"
+                        },
+                        "status": "success",
+                        "initiatorRef": {
+                            "oid": "d83c98d5-dea9-49eb-b649-60fd5609a4d3",
+                            "relation": "org:default",
+                            "type": "c:UserType"
+                        },
+                        "channel": "http://midpoint.evolveum.com/xml/ns/public/common/channels-3#rest"
+                    },
+                    {
+                        "@id": 9,
+                        "recordType": "simple",
+                        "timestamp": "2024-09-24T14:11:08.938Z",
+                        "operation": {
+                            "objectDelta": {
+                                "changeType": "modify",
+                                "objectType": "c:UserType"
+                            },
+                            "executionResult": {
+                                "operation": "com.evolveum.midpoint.model.impl.lens.ChangeExecutor.unlinkShadow",
+                                "status": "success",
+                                "importance": "normal",
+                                "token": 1000000000000016373
+                            },
+                            "objectName": "sgonzalez@atricore.com"
+                        },
+                        "status": "success",
+                        "initiatorRef": {
+                            "oid": "00000000-0000-0000-0000-000000000002",
+                            "relation": "org:default",
+                            "type": "c:UserType"
+                        },
+                        "channel": "http://midpoint.evolveum.com/xml/ns/public/common/channels-3#user"
+                    },
+                    {
+                        "@id": 12,
+                        "recordType": "simple",
+                        "timestamp": "2024-09-30T12:15:19.369Z",
+                        "operation": {
+                            "objectDelta": {
+                                "changeType": "modify",
+                                "objectType": "c:UserType"
+                            },
+                            "executionResult": {
+                                "operation": "com.evolveum.midpoint.model.impl.lens.ChangeExecutor.executeDelta",
+                                "status": "success",
+                                "importance": "normal",
+                                "token": 1000000000000050736
+                            },
+                            "objectName": "sgonzalez@atricore.com"
+                        },
+                        "status": "success",
+                        "initiatorRef": {
+                            "oid": "d83c98d5-dea9-49eb-b649-60fd5609a4d3",
+                            "relation": "org:default",
+                            "type": "c:UserType"
+                        },
+                        "channel": "http://midpoint.evolveum.com/xml/ns/public/common/channels-3#rest"
+                    }
+                ],
+                "assignment": [
+                    {
+                        "@id": 1,
+                        "subtype": "HR",
+                        "metadata": {
+                            "requestTimestamp": "2024-09-24T02:36:53.054Z",
+                            "requestorRef": {
+                                "oid": "00000000-0000-0000-0000-000000000002",
+                                "relation": "org:default",
+                                "type": "c:UserType"
+                            },
+                            "createTimestamp": "2024-09-24T02:36:53.082Z",
+                            "creatorRef": {
+                                "oid": "00000000-0000-0000-0000-000000000002",
+                                "relation": "org:default",
+                                "type": "c:UserType"
+                            },
+                            "createChannel": "http://midpoint.evolveum.com/xml/ns/public/common/channels-3#import",
+                            "createTaskRef": {
+                                "oid": "10000000-0000-0000-0000-000000000500",
+                                "relation": "org:default",
+                                "type": "c:TaskType"
+                            },
+                            "originMappingName": "role-approver"
+                        },
+                        "targetRef": {
+                            "oid": "00000000-0000-0000-0000-00000000000a",
+                            "relation": "org:default",
+                            "type": "c:RoleType"
+                        },
+                        "activation": {
+                            "effectiveStatus": "enabled"
+                        }
+                    },
+                    {
+                        "@id": 2,
+                        "subtype": "HR-ORG",
+                        "metadata": {
+                            "requestTimestamp": "2024-09-24T02:36:53.054Z",
+                            "requestorRef": {
+                                "oid": "00000000-0000-0000-0000-000000000002",
+                                "relation": "org:default",
+                                "type": "c:UserType"
+                            },
+                            "createTimestamp": "2024-09-24T02:36:53.082Z",
+                            "creatorRef": {
+                                "oid": "00000000-0000-0000-0000-000000000002",
+                                "relation": "org:default",
+                                "type": "c:UserType"
+                            },
+                            "createChannel": "http://midpoint.evolveum.com/xml/ns/public/common/channels-3#import",
+                            "createTaskRef": {
+                                "oid": "10000000-0000-0000-0000-000000000500",
+                                "relation": "org:default",
+                                "type": "c:TaskType"
+                            },
+                            "originMappingName": "org-manager"
+                        },
+                        "targetRef": {
+                            "oid": "95f4a65d-9937-4c78-8182-c131c12863fe",
+                            "relation": "org:manager",
+                            "type": "c:OrgType"
+                        },
+                        "activation": {
+                            "effectiveStatus": "enabled"
+                        }
+                    },
+                    {
+                        "@id": 3,
+                        "subtype": "TEMPLATE",
+                        "metadata": {
+                            "requestTimestamp": "2024-09-24T02:36:53.054Z",
+                            "requestorRef": {
+                                "oid": "00000000-0000-0000-0000-000000000002",
+                                "relation": "org:default",
+                                "type": "c:UserType"
+                            },
+                            "createTimestamp": "2024-09-24T02:36:53.082Z",
+                            "creatorRef": {
+                                "oid": "00000000-0000-0000-0000-000000000002",
+                                "relation": "org:default",
+                                "type": "c:UserType"
+                            },
+                            "createChannel": "http://midpoint.evolveum.com/xml/ns/public/common/channels-3#import",
+                            "createTaskRef": {
+                                "oid": "10000000-0000-0000-0000-000000000500",
+                                "relation": "org:default",
+                                "type": "c:TaskType"
+                            },
+                            "originMappingName": "assign user type archetype"
+                        },
+                        "targetRef": {
+                            "oid": "10000000-0000-0000-0000-000000000302",
+                            "relation": "org:default",
+                            "type": "c:ArchetypeType"
+                        },
+                        "activation": {
+                            "effectiveStatus": "enabled"
+                        }
+                    }
+                ],
+                "iteration": 0,
+                "iterationToken": "",
+                "archetypeRef": {
+                    "oid": "10000000-0000-0000-0000-000000000302",
+                    "relation": "org:default",
+                    "type": "c:ArchetypeType"
+                },
+                "roleMembershipRef": [
+                    {
+                        "@metadata": {
+                            "storage": {
+                                "createTimestamp": "2024-09-24T02:36:53.082Z"
+                            },
+                            "provenance": {
+                                "assignmentPath": {
+                                    "sourceRef": {
+                                        "oid": "f499f0be-db20-4bfa-b3f9-96ff08550502",
+                                        "relation": "org:default",
+                                        "type": "c:UserType"
+                                    },
+                                    "segment": {
+                                        "segmentOrder": 1,
+                                        "assignmentId": 3,
+                                        "targetRef": {
+                                            "oid": "10000000-0000-0000-0000-000000000302",
+                                            "relation": "org:default",
+                                            "type": "c:ArchetypeType"
+                                        },
+                                        "matchingOrder": True
+                                    }
+                                }
+                            }
+                        },
+                        "oid": "10000000-0000-0000-0000-000000000302",
+                        "relation": "org:default",
+                        "type": "c:ArchetypeType"
+                    },
+                    {
+                        "@metadata": {
+                            "storage": {
+                                "createTimestamp": "2024-09-24T02:36:53.082Z"
+                            },
+                            "provenance": {
+                                "assignmentPath": {
+                                    "sourceRef": {
+                                        "oid": "f499f0be-db20-4bfa-b3f9-96ff08550502",
+                                        "relation": "org:default",
+                                        "type": "c:UserType"
+                                    },
+                                    "segment": [
+                                        {
+                                            "segmentOrder": 1,
+                                            "assignmentId": 3,
+                                            "targetRef": {
+                                                "oid": "10000000-0000-0000-0000-000000000302",
+                                                "relation": "org:default",
+                                                "type": "c:ArchetypeType"
+                                            },
+                                            "matchingOrder": True
+                                        },
+                                        {
+                                            "segmentOrder": 2,
+                                            "inducementId": 3,
+                                            "targetRef": {
+                                                "oid": "10000000-0000-0000-0000-000000001001",
+                                                "relation": "org:default",
+                                                "type": "c:RoleType"
+                                            },
+                                            "matchingOrder": True
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        "oid": "10000000-0000-0000-0000-000000001001",
+                        "relation": "org:default",
+                        "type": "c:RoleType"
+                    },
+                    {
+                        "@metadata": {
+                            "storage": {
+                                "createTimestamp": "2024-09-24T02:36:53.082Z"
+                            },
+                            "provenance": {
+                                "assignmentPath": {
+                                    "sourceRef": {
+                                        "oid": "f499f0be-db20-4bfa-b3f9-96ff08550502",
+                                        "relation": "org:default",
+                                        "type": "c:UserType"
+                                    },
+                                    "segment": [
+                                        {
+                                            "segmentOrder": 1,
+                                            "assignmentId": 3,
+                                            "targetRef": {
+                                                "oid": "10000000-0000-0000-0000-000000000302",
+                                                "relation": "org:default",
+                                                "type": "c:ArchetypeType"
+                                            },
+                                            "matchingOrder": True
+                                        },
+                                        {
+                                            "segmentOrder": 2,
+                                            "inducementId": 3,
+                                            "targetRef": {
+                                                "oid": "10000000-0000-0000-0000-000000001001",
+                                                "relation": "org:default",
+                                                "type": "c:RoleType"
+                                            },
+                                            "matchingOrder": True
+                                        },
+                                        {
+                                            "segmentOrder": 3,
+                                            "inducementId": 2,
+                                            "targetRef": {
+                                                "oid": "00000000-0000-0000-0000-000000000008",
+                                                "relation": "org:default",
+                                                "type": "c:RoleType"
+                                            },
+                                            "matchingOrder": True
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        "oid": "00000000-0000-0000-0000-000000000008",
+                        "relation": "org:default",
+                        "type": "c:RoleType"
+                    },
+                    {
+                        "@metadata": {
+                            "storage": {
+                                "createTimestamp": "2024-09-24T02:36:53.082Z"
+                            },
+                            "provenance": {
+                                "assignmentPath": {
+                                    "sourceRef": {
+                                        "oid": "f499f0be-db20-4bfa-b3f9-96ff08550502",
+                                        "relation": "org:default",
+                                        "type": "c:UserType"
+                                    },
+                                    "segment": [
+                                        {
+                                            "segmentOrder": 1,
+                                            "assignmentId": 3,
+                                            "targetRef": {
+                                                "oid": "10000000-0000-0000-0000-000000000302",
+                                                "relation": "org:default",
+                                                "type": "c:ArchetypeType"
+                                            },
+                                            "matchingOrder": True
+                                        },
+                                        {
+                                            "segmentOrder": 2,
+                                            "inducementId": 3,
+                                            "targetRef": {
+                                                "oid": "10000000-0000-0000-0000-000000001001",
+                                                "relation": "org:default",
+                                                "type": "c:RoleType"
+                                            },
+                                            "matchingOrder": True
+                                        },
+                                        {
+                                            "segmentOrder": 3,
+                                            "inducementId": 3,
+                                            "targetRef": {
+                                                "oid": "10000000-0000-0000-0000-000000001010",
+                                                "relation": "org:default",
+                                                "type": "c:RoleType"
+                                            },
+                                            "matchingOrder": True
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        "oid": "10000000-0000-0000-0000-000000001010",
+                        "relation": "org:default",
+                        "type": "c:RoleType"
+                    },
+                    {
+                        "@metadata": {
+                            "storage": {
+                                "createTimestamp": "2024-09-24T02:36:53.082Z"
+                            },
+                            "provenance": {
+                                "assignmentPath": {
+                                    "sourceRef": {
+                                        "oid": "f499f0be-db20-4bfa-b3f9-96ff08550502",
+                                        "relation": "org:default",
+                                        "type": "c:UserType"
+                                    },
+                                    "segment": {
+                                        "segmentOrder": 1,
+                                        "assignmentId": 2,
+                                        "targetRef": {
+                                            "oid": "95f4a65d-9937-4c78-8182-c131c12863fe",
+                                            "relation": "org:manager",
+                                            "type": "c:OrgType"
+                                        },
+                                        "matchingOrder": True
+                                    }
+                                }
+                            }
+                        },
+                        "oid": "95f4a65d-9937-4c78-8182-c131c12863fe",
+                        "relation": "org:manager",
+                        "type": "c:OrgType"
+                    },
+                    {
+                        "@metadata": {
+                            "storage": {
+                                "createTimestamp": "2024-09-24T02:36:53.082Z"
+                            },
+                            "provenance": {
+                                "assignmentPath": {
+                                    "sourceRef": {
+                                        "oid": "f499f0be-db20-4bfa-b3f9-96ff08550502",
+                                        "relation": "org:default",
+                                        "type": "c:UserType"
+                                    },
+                                    "segment": {
+                                        "segmentOrder": 1,
+                                        "assignmentId": 1,
+                                        "targetRef": {
+                                            "oid": "00000000-0000-0000-0000-00000000000a",
+                                            "relation": "org:default",
+                                            "type": "c:RoleType"
+                                        },
+                                        "matchingOrder": True
+                                    }
+                                }
+                            }
+                        },
+                        "oid": "00000000-0000-0000-0000-00000000000a",
+                        "relation": "org:default",
+                        "type": "c:RoleType"
+                    }
+                ],
+                "activation": {
+                    "administrativeStatus": "disabled",
+                    "effectiveStatus": "disabled",
+                    "disableTimestamp": "2024-09-30T12:15:19.291Z",
+                    "enableTimestamp": "2024-09-24T02:51:13.266Z",
+                    "lockoutStatus": "locked",
+                    "lockoutExpirationTimestamp": "2024-09-30T12:19:43.707Z"
+                },
+                "emailAddress": "sgonzalez@atricore.com",
+                "behavior": {
+                    "authentication": {
+                        "@id": 10,
+                        "failedLogins": 7,
+                        "lastFailedLogin": {
+                            "timestamp": "2024-09-30T12:16:52.096Z",
+                            "from": "10.244.2.0"
+                        },
+                        "authenticationAttempt": {
+                            "sequenceIdentifier": "admin-gui-default",
+                            "moduleIdentifier": "loginForm",
+                            "lastFailedAuthentication": {
+                                "timestamp": "2024-09-30T12:16:52.077Z",
+                                "from": "10.244.2.0"
+                            },
+                            "failedAttempts": 2,
+                            "lockoutTimestamp": "2024-09-30T12:04:43.707Z",
+                            "lockoutExpirationTimestamp": "2024-09-30T12:19:43.707Z"
+                        },
+                        "sequenceIdentifier": "admin-gui-default"
+                    }
+                },
+                "fullName": "Sebastian Gonzalez Oyuela",
+                "givenName": "Sebastian",
+                "familyName": "Gonzalez Oyuela",
+                "organizationalUnit": "516f6a32-ae6b-4a74-a532-29105eebbd9e"
+            }
+        ]
+    }
+}
