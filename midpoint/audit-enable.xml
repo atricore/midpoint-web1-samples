@@ -1,0 +1,5 @@
+        <auditing>
+            <enabled>true</enabled>
+            <details>false</details>
+            <appender>MIDPOINT_AUDIT_LOG</appender>
+        </auditing>
